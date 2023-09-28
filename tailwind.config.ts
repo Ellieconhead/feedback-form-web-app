@@ -9,11 +9,27 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-to-t': 'linear-gradient(to top, var(--tw-gradient-stops))',
+        'background-color': 'rgb(10 10 10)'
       },
-    },
+      colors: {
+        'black': 'rgb(17 24 39)',
+        'yellow': 'rgb(255 255 200)',
+        'white': 'rgb(255 255 255)',
+        'blue': 'rgb(12, 17, 66)',
+        'light-blue': 'rgb(43, 212, 219)'
+      },
+      fontSize: {
+        'l': ['1.5rem', {
+          lineHeight: '1.375rem',
+          fontWeight: '700'
+        }],
+        'm': ['1.125rem', {
+          lineHeight: '1.375rem',
+          fontWeight: '400'
+        }],
+      },
+    }
   },
   plugins: [],
 }
