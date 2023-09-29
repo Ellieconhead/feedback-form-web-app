@@ -3,6 +3,18 @@ import '@testing-library/jest-dom';
 import { render, screen, act, fireEvent } from '@testing-library/react';
 import { FeedbackForm } from '../FeedbackForm';
 
+jest.mock('next/navigation', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '',
+      query: '',
+      asPath: '/',
+      push: jest.fn()
+    };
+  }
+}));
+
 describe('FeedbackForm', () => {
   it('should render the feedback form with the correct fields', () => {
     // Arrange and Act
